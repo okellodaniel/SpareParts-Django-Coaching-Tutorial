@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Update Spare Parts</h1>
+
+        <form action='updateSparePart/{{ spare_part.id }} ' method='POST'>
+            {%csrf_token%}
+
+            Spare Part Name: <br>
+            <input type='text' name='Spare Part Name' value='{{ spare_part.names}}'>
+            <br><br>
+
+            Spare Part Number: <br>
+            <input type='int' name='Spare Part Number' value='{{ spare_part.part_number}}'>
+            <br><br>
+
+            Arrival Date: <br>
+            <input name='Arrival Date' value='{{ spare_part.arrival_date}}'>
+            <br><br>
+
+            Total Initial Stock Quantity: <br>
+            <input type='text' name='Total Initial Stock Quantity' value='{{ spare_part.total_initial_stock_quantity}}'>
+            <br><br>
+
+            Country: <br>
+            <input type='text' name='Country' value='{{ spare_part.country}}'>
+            <br><br>
+
+            Branch Name: <br>
+            <input type='text' name='Branch Name' value='{{ spare_part.branch_name}}'>
+            <br><br>
+
+            Category: <br>
+            <input type='text' name='Category' value='{{ spare_part.category}}'>
+            <br><br>
+
+            <input type="submit" value="Submit" class='btn btn-primary'>
+        </form>
+    </div>
+</body>
+
+</html>

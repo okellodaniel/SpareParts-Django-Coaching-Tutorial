@@ -1,0 +1,20 @@
+CRUD Methods
+
+Create
+
+Read
+
+Update
+
+Delete
+
+
+HTTP VERBS
+
+ - POST - Adding data in a form
+ - GET  - View data in a table
+        - Load a page
+
+ - Delete - Delete a resource
+
+ - Update - Update a resource

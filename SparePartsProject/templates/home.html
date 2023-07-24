@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Spare Parts</h1>
+        <table class="table" border="1">
+            <tr>
+                <th>Part Name</th>
+                <th>Part Number</th>
+                <th>Initial Stock</th>
+                <th>Country</th>
+                <th>Branch Name</th>
+                <th>Category</th>
+                <th>Arrival Date</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            {% for x in spare_part %}
+            <tr>
+                <td>{{x.part_name}}</td>
+                <td>{{x.part_number}}</td>
+                <td>{{x.total_initial_stock_quantity}}</td>
+                <td>{{x.country_of_origin}}</td>
+                <td>{{x.branch_name}}</td>
+                <td>{{x.category}}</td>
+                <td>{{x.arrival_date}}</td>
+                <td><a href='delete/{{x.id}}'>delete</a></td>
+                <td><a href='update/{{x.id}}'>update</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <p><a href="add/">Add Spare Part</a></p>
+    </div>
+
+</body>
+
+</html>
